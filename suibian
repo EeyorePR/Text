@@ -1,0 +1,36 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main(){
+
+	long A,B,Pa=0,Pb=0;
+	int Da,Db,sum;
+	
+	int temp,count=0;
+	
+	cin>>A>>Da>>B>>Db;
+	
+	while(A>0){
+	    temp=A%10;
+		if(temp==Da){
+			Pa+=(pow(10.0,count)*Da);
+			count+=1;
+		}
+		A=A/10;
+	}
+	
+	count=0;
+	
+	while(B>0){
+	    temp=B%10;
+		if(temp==Db){
+			Pb+=(pow(10.0,count)*Db);
+			count+=1;
+		}
+		B=B/10;
+	}
+	sum=Pa+Pb;
+	cout<<(int)sum;
+	return 0;
+} 
